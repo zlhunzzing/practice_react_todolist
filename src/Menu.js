@@ -5,12 +5,15 @@ import Complet from './Complet';
 import Lists from './Lists';
 import AddList from './AddList';
 
-const Menu = () => (
+const Menu = (props) => (
     <div className="Menu">Menu
+    {/* {console.log(props)} */}
         <Search></Search>
         <Complet></Complet>
-        <Lists></Lists>
-        <AddList></AddList>
+        <Lists 
+        Menu={props}
+        ></Lists>
+        <AddList Menu={props}></AddList>
     </div>
 )
 
